@@ -62,7 +62,7 @@ fitted.l$lcl <- fitted.l$fit - 1.96 * fitted.l$se.fit
 
 plot.l.his <- ggplot(data=data.l, aes(Week, Cumulative_Cases)) + geom_point(shape=17)
 plot.l.stquo <- plot.l.n + geom_line(data=fitted.l, aes(x=Week, y=fit), lwd=1.5, alpha=0.8) + geom_ribbon(aes(ymin = lcl, ymax = ucl), data=fitted.l, alpha=0.2)
-plot.l.stquo
+plot.l.stquo + theme_bw()
 
 
 

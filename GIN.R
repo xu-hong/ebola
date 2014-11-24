@@ -38,7 +38,7 @@ plot.g.r <- ggplot(data.g.plot.new, aes(Week, value)) + facet_grid(variable~.,  
 plot.g.r1 <- plot.g.r + geom_bar(data=subset(data.g.plot.new, variable=="New_Cases"), aes(Week, value), stat="identity", fill="darkorange", color="gray89") 
 plot.g.r2 <- plot.g.r1 + geom_line(data=subset(data.g.plot.new, variable=="R"), aes(Week, value), alpha=0.3, lwd=1) + geom_hline(data=subset(data.g.plot.new, variable=="R"),aes(yintercept=1), colour="firebrick")
 #plot.g.r3 <- plot.g.r2 + geom_smooth(data=subset(data.g.plot, variable=="R"), aes(Week, value), color="gray20")
-plot.g.r2 + theme_bw()
+plot.g.r2 + theme_bw() + scale_x_continuous(breaks=c(0, 10, 20, 30, 40, 46), labels=c(0, 10, 20, 30, 40, 46)) + theme(axis.text.x = element_text(size=12)) 
 
 
 # if we look at cumulative counts
@@ -134,7 +134,7 @@ for (i in 6:20) {
 g.sc.p <- g.sc[1:14,]
 plot.g.w46 <- plot.g.stquo + geom_line(data=g.sc.p, aes(x=Week, y=sc1.c), lwd=1.5, alpha=0.8, color="dodgerblue1") + geom_line(data=g.sc.p, aes(x=Week, y=sc2.c), lwd=1.5, alpha=0.8, color="violetred1") + geom_vline(xintercept = 53, colour="firebrick", lwd=1, linetype = "longdash")
 plot.g.w49 <- plot.g.w46 + geom_line(data=g.sc.p, aes(x=Week, y=sc3.c), lwd=1.5, alpha=0.8, color="dodgerblue4") + geom_line(data=g.sc.p, aes(x=Week, y=sc4.c), lwd=1.5, alpha=0.8, color="violetred4")
-plot.g.w49 + theme_bw()
+plot.g.w49 + theme_bw() + scale_x_continuous(breaks=c(1, 23, 46, 53), labels=c("Jan 05, 2014", "June 08, 2014", "Nov 16, 2014", "Jan 04, 2015")) + theme(axis.text.x = element_text(size=12)) 
 
 
 
