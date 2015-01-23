@@ -12,3 +12,9 @@
 
 ## Forcasting Guinea
 ![alt text](https://github.com/xu-hong/ebola/blob/master/screenshot4.png "Guinea Forcast")
+
+## Situation in Sierra Leone
+![alt text](https://github.com/xu-hong/ebola/blob/master/screenshot5.png "Sierra Leone")
+
+## Forcasting Sierra Leone
+![alt text](https://github.com/xu-hong/ebola/blob/master/screenshot6.png "Sierra Leone Forcast")
